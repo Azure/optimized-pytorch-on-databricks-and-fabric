@@ -8,12 +8,12 @@
 
 #### To reproduce the notebooks, you will need to setup the following infrastructure:
 
-1. Microsoft Fabric Workspace and Lakehouse:
+1. **Microsoft Fabric Workspace and Lakehouse**:
 - You need access to a Microsoft Fabric environment, which can be done through a [Fabric trial](https://learn.microsoft.com/en-us/fabric/get-started/fabric-trial), or a [paid Fabric subscription](https://learn.microsoft.com/en-us/fabric/enterprise/buy-subscription).
 - Then you need access to a Fabric Workspace to upload and run the Notebooks and a Fabric Lakehouse to store data. We recommend that you have a dedicated [Workspace](https://learn.microsoft.com/en-us/fabric/get-started/create-workspaces) and a dedicated [Lakehouse](https://learn.microsoft.com/en-us/fabric/data-engineering/create-lakehouse) to run the notebooks. You can use the default configurations when creating the Workspace and Lakehouse.
 - You also need to [install PyPI libraries to your Workspace](https://learn.microsoft.com/en-us/fabric/data-science/python-guide/python-library-management#install-workspace-libraries): *torch* version 2.0.1, *transformers* version 4.29.2, and *optimum* version 1.8.6.
 
-2. [Azure Databricks](https://learn.microsoft.com/en-us/azure/databricks/introduction/):
+2. **Azure Databricks**:
 - You need access to an [Azure Databricks Workspace](https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal?tabs=azure-portal#create-an-azure-databricks-workspace). For the Pricing Tier, it should be of type *Premium* to have seamless integration with the Microsoft Fabric Lakehouse.
 - [Create a Cluster](https://docs.microsoft.com/en-us/azure/databricks/clusters/create). Your cluster configuration should be based on nodes of type Standard_NC4as_T4_v3. Please make sure you have enough CPU cores of that type, otherwise work with your Azure subscription administrator to request a quota increase. Use the information below when creating your cluster:
 - Databricks runtime version should be at least 13.0 ML (GPU, Scala 2.12, Spark 3.4.0)
