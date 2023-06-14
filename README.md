@@ -1,5 +1,7 @@
 # PyTorch model training with *Fully Sharded Data Parallel* on Azure Databricks and inference with *BetterTransformer* on Microsoft Fabric
 
+#### This is the repository for the blog post [Training and Inference of LLMs with PyTorch Fully Sharded Data Parallel and Better Transformer](https://techcommunity.microsoft.com/t5/ai-customer-engineering-team/training-and-inference-of-llms-with-pytorch-fully-sharded-data/ba-p/3845995)
+
 #### This repository contains sample code showing how to perform optimized model training with PyTorch [Fully Sharded Data Parallel]( https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html#getting-started-with-fully-sharded-data-parallel-fsdp) training, and how to perform optimized model inference using PyTorch [BetterTransformer]( https://pytorch.org/blog/a-better-transformer-for-fast-transformer-encoder-inference/) through an [integration with Hugging Face Optimum](https://huggingface.co/docs/optimum/bettertransformer/tutorials/convert).
 
 #### Data preparation and model inference are performed on [Microsoft Fabric]( https://learn.microsoft.com/en-us/fabric/get-started/microsoft-fabric-overview). Model training is performed on [Azure Databricks]( https://learn.microsoft.com/en-us/azure/databricks/introduction/).
