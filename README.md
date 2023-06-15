@@ -16,12 +16,12 @@
 2. **Azure Databricks**:
 - You need access to an [Azure Databricks Workspace](https://docs.microsoft.com/en-us/azure/databricks/scenarios/quickstart-create-databricks-workspace-portal?tabs=azure-portal#create-an-azure-databricks-workspace). For the Pricing Tier, it should be of type *Premium* to have seamless integration with the Microsoft Fabric Lakehouse.
 - [Create a Cluster](https://docs.microsoft.com/en-us/azure/databricks/clusters/create). Your cluster configuration should be based on nodes of type Standard_NC4as_T4_v3. Please make sure you have enough CPU cores of that type, otherwise work with your Azure subscription administrator to request a quota increase. Use the information below when creating your cluster:
-- Multi node cluster, single-user.
-- Databricks runtime version should be at least 13.0 ML (GPU, Scala 2.12, Spark 3.4.0). The code was tested on that version.
-- Worker type should be Standard_NC4as_T4_v3 and number of workers should be at least 2 (the notebooks here were run with 8 worker nodes)
-- Driver type should be the same as worker type
-- Disable autoscaling
-- Install a [cluster-scoped init script](https://docs.microsoft.com/en-us/azure/databricks/clusters/init-scripts#cluster-scoped-init-scripts)  in your cluster. The script to be installed is the [env_update.sh](https://github.com/Azure/optimized-pytorch-on-databricks-and-fabric/blob/main/Azure%20Databricks/env_update.sh).
+  - Multi node cluster, single-user.
+  - Databricks runtime version should be at least 13.0 ML (GPU, Scala 2.12, Spark 3.4.0). The code was tested on that version.
+  - Worker type should be Standard_NC4as_T4_v3 and number of workers should be at least 2 (the notebooks here were run with 8 worker nodes)
+  - Driver type should be the same as worker type
+  - Disable autoscaling
+  - Install a [cluster-scoped init script](https://docs.microsoft.com/en-us/azure/databricks/clusters/init-scripts#cluster-scoped-init-scripts)  in your cluster. The script to be installed is the [env_update.sh](https://github.com/Azure/optimized-pytorch-on-databricks-and-fabric/blob/main/Azure%20Databricks/env_update.sh).
 
 #### The notebooks provided here are the following and should be run in the following order:
 1. [data_preparation.ipynb](https://github.com/Azure/optimized-pytorch-on-databricks-and-fabric/blob/main/Microsoft%20Fabric/data_preparation.ipynb): it downloads and prepares the datasets needed for model training and inference. This notebook runs on Microsoft Fabric.
